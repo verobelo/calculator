@@ -137,9 +137,4 @@ document.addEventListener("keydown", (e) => {
 modeToggleButton.addEventListener("click", (e) => {
   body.classList.toggle("dark-mode");
   e.target.blur();
-  if (e.target.textContent === "🌚︎") {
-    e.target.textContent = "🌞︎︎";
-  } else {
-    e.target.textContent = "🌚︎";
-  }
 });
