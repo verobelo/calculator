@@ -78,3 +78,11 @@ function calculate(previousOperand, operator, currentOperand) {
       break;
   }
 }
+
+equalButton.addEventListener("click", (e) => {
+  if (previousOperand !== "" && operator !== "" && currentOperand !== "") {
+    result = calculate(previousOperand, operator, currentOperand);
+    previousOperandText.textContent = "";
+    currentOperandText.textContent = Math.round(result * 100) / 100;
+  }
+});
