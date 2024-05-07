@@ -125,3 +125,12 @@ document.addEventListener("keydown", (e) => {
     clearDisplay();
   }
 });
+
+modeToggleButton.addEventListener("click", (e) => {
+  body.classList.toggle("dark-mode");
+  if (e.target.textContent === "🌚︎") {
+    e.target.textContent = "🌞︎︎";
+  } else {
+    e.target.textContent = "🌚︎";
+  }
+});
