@@ -94,6 +94,7 @@ body {
   font-size: 2rem;
   border-radius: 100%;
   text-align: center;
+  padding: 10px;
 }
 
 .dark-mode * {
