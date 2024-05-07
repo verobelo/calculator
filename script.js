@@ -28,6 +28,7 @@ for (const number of numberButtons) {
   number.addEventListener("click", (e) => {
     appendNumber(e.target.textContent);
     currentOperandText.textContent = currentOperand;
+    e.target.blur();
   });
 }
 
@@ -36,6 +37,7 @@ for (const op of operatorButtons) {
     appendOperator(e.target.textContent);
     previousOperandText.textContent = previousOperand + operator;
     currentOperandText.textContent = currentOperand;
+    e.target.blur();
   });
 }
 
@@ -84,18 +86,23 @@ equalButton.addEventListener("click", (e) => {
     result = calculate(previousOperand, operator, currentOperand);
     previousOperandText.textContent = "";
     currentOperandText.textContent = Math.round(result * 100) / 100;
+    e.target.blur();
   }
 });
 
 decimalButton.addEventListener("click", (e) => {
   if (!currentOperand.includes(".")) {
     currentOperand += number;
+    e.target.blur();
   } else {
     decimalButton.disabled = true;
   }
 });
 
-clearButton.addEventListener("click", clearDisplay);
+clearButton.addEventListener("click", (e) => {
+  clearDisplay();
+  e.target.blur();
+});
 
 function clearDisplay() {
   previousOperandText.textContent = "";
@@ -116,6 +123,7 @@ document.addEventListener("keydown", (e) => {
     previousOperandText.textContent = previousOperand + " " + operator;
     currentOperandText.textContent = currentOperand;
   } else if (e.key === "Enter") {
+    e.preventDefault();
     if (previousOperand !== "" && operator !== "" && currentOperand !== "") {
       result = calculate(previousOperand, operator, currentOperand);
       previousOperandText.textContent = "";
@@ -128,6 +136,7 @@ document.addEventListener("keydown", (e) => {
 
 modeToggleButton.addEventListener("click", (e) => {
   body.classList.toggle("dark-mode");
+  e.target.blur();
   if (e.target.textContent === "🌚︎") {
     e.target.textContent = "🌞︎︎";
   } else {
