@@ -53,3 +53,37 @@ body {
   flex-wrap: wrap;
   gap: 16px;
 }
+
+.buttons button {
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.number,
+#clear {
+  background-color: white;
+  border: 3px groove #ddd;
+}
+
+.number:hover,
+#clear:hover {
+  background-color: #ddd;
+}
+
+.operator,
+#equal {
+  background-color: dodgerblue;
+  border: 3px groove dodgerblue;
+}
+
+.operator:hover,
+#equal:hover {
+  background-color: rgb(10, 125, 240);
+  border: 3px groove rgb(10, 125, 240);
+}
+
+#equal {
+  width: 100%;
+}
