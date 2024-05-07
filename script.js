@@ -18,3 +18,8 @@ const divide = function (a, b) {
     return NaN;
   }
 };
+
+let operator = "";
+let previousOperand = "";
+let currentOperand = "";
+let result = "";
