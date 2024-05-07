@@ -104,3 +104,24 @@ function clearDisplay() {
   previousOperand = "";
   currentOperand = "";
 }
+
+document.addEventListener("keydown", (e) => {
+  const numRegex = /\d/g;
+  const opRegex = /[+\-*/]/g;
+  if (e.key.match(numRegex)) {
+    appendNumber(e.key);
+    currentOperandText.textContent = currentOperand;
+  } else if (e.key.match(opRegex)) {
+    appendOperator(e.key);
+    previousOperandText.textContent = previousOperand + " " + operator;
+    currentOperandText.textContent = currentOperand;
+  } else if (e.key === "Enter") {
+    if (previousOperand !== "" && operator !== "" && currentOperand !== "") {
+      result = calculate(previousOperand, operator, currentOperand);
+      previousOperandText.textContent = "";
+      currentOperandText.textContent = Math.round(result * 100) / 100;
+    }
+  } else if (e.key === "Delete") {
+    clearDisplay();
+  }
+});
