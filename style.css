@@ -91,15 +91,19 @@ body {
 .mode-toggle {
   align-self: flex-end;
   margin-right: 3rem;
-  font-size: 2rem;
   border: none;
   text-align: center;
-  padding: 10px;
-  border-radius: 50%;
+  display: inline-block;
+  font-size: 3rem;
+  background-color: #fff;
 }
 
 .dark-mode .buttons button {
   color: #fff;
+}
+
+.dark-mode .mode-toggle {
+  background-color: #222;
 }
 
 .dark-mode {
