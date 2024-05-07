@@ -87,3 +87,10 @@ body {
 #equal {
   width: 100%;
 }
+
+.mode-toggle {
+  align-self: flex-end;
+  margin-right: 3rem;
+  font-size: 2rem;
+  border-radius: 100%;
+}
