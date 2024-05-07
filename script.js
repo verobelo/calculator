@@ -59,3 +59,22 @@ function appendOperator(op) {
     decimalButton.disabled = false;
   }
 }
+
+function calculate(previousOperand, operator, currentOperand) {
+  previousOperand = Number(previousOperand);
+  currentOperand = Number(currentOperand);
+  switch (operator) {
+    case "+":
+      return add(previousOperand, currentOperand);
+      break;
+    case "-":
+      return subtract(previousOperand, currentOperand);
+      break;
+    case "*":
+      return multiply(previousOperand, currentOperand);
+      break;
+    case "/":
+      return divide(previousOperand, currentOperand);
+      break;
+  }
+}
