@@ -93,11 +93,15 @@ body {
   margin-right: 3rem;
   font-size: 2rem;
   border-radius: 100%;
+  text-align: center;
 }
 
 .dark-mode * {
-  background-color: #222;
   color: #fff;
+}
+
+.dark-mode {
+  background-color: #222;
 }
 
 .dark-mode .calculator {
