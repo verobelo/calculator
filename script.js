@@ -94,3 +94,13 @@ decimalButton.addEventListener("click", (e) => {
     decimalButton.disabled = true;
   }
 });
+
+clearButton.addEventListener("click", clearDisplay);
+
+function clearDisplay() {
+  previousOperandText.textContent = "";
+  currentOperandText.textContent = "";
+  operator = "";
+  previousOperand = "";
+  currentOperand = "";
+}
