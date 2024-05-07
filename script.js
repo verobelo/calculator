@@ -23,3 +23,18 @@ let operator = "";
 let previousOperand = "";
 let currentOperand = "";
 let result = "";
+
+for (const number of numberButtons) {
+  number.addEventListener("click", (e) => {
+    appendNumber(e.target.textContent);
+    currentOperandText.textContent = currentOperand;
+  });
+}
+
+for (const op of operatorButtons) {
+  op.addEventListener("click", (e) => {
+    appendOperator(e.target.textContent);
+    previousOperandText.textContent = previousOperand + operator;
+    currentOperandText.textContent = currentOperand;
+  });
+}
