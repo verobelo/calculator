@@ -86,3 +86,11 @@ equalButton.addEventListener("click", (e) => {
     currentOperandText.textContent = Math.round(result * 100) / 100;
   }
 });
+
+decimalButton.addEventListener("click", (e) => {
+  if (!currentOperand.includes(".")) {
+    currentOperand += number;
+  } else {
+    decimalButton.disabled = true;
+  }
+});
