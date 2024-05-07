@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Jersey+10+Charted&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&family=Tilt+Prism&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+.calculator-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  height: 40px;
+  width: calc(100% - 40px);
+  padding: 20px;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  background-color: white;
+  border: 3px groove #ddd;
+}
+
+.calculator {
+  background-color: #eeeeee;
+  width: 250px;
+  max-width: 400px;
+  font-size: 1.5rem;
+  padding: 20px;
+  border: 3px groove #ddd;
+  margin-top: -100px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
