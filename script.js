@@ -38,3 +38,24 @@ for (const op of operatorButtons) {
     currentOperandText.textContent = currentOperand;
   });
 }
+
+function appendNumber(number) {
+  if (currentOperand.length <= 5) {
+    currentOperand += number;
+  }
+}
+
+function appendOperator(op) {
+  if (previousOperand !== "" && operator !== "") {
+    result = calculate(previousOperand, operator, currentOperand);
+    previousOperand = result;
+    operator = op;
+    currentOperand = "";
+    decimalButton.disabled = false;
+  } else {
+    operator = op;
+    previousOperand = currentOperand;
+    currentOperand = "";
+    decimalButton.disabled = false;
+  }
+}
