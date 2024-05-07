@@ -97,7 +97,7 @@ body {
   padding: 10px;
 }
 
-.dark-mode * {
+.dark-mode .buttons button {
   color: #fff;
 }
 
