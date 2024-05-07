@@ -123,12 +123,12 @@ body {
 
 .dark-mode .operator,
 .dark-mode #equal {
-  background-color: tomato;
-  border: 3px groove tomato;
+  background-color: orange;
+  border: 3px groove orange;
 }
 
 .dark-mode .operator:hover,
 .dark-mode #equal:hover {
-  background-color: rgb(248, 128, 106);
-  border: 3px groove rgb(248, 128, 106);
+  background-color: rgb(247, 183, 64);
+  border: 3px groove rgb(247, 183, 64);
 }
