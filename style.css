@@ -92,9 +92,10 @@ body {
   align-self: flex-end;
   margin-right: 3rem;
   font-size: 2rem;
-  border-radius: 50%;
+  border: none;
   text-align: center;
   padding: 10px;
+  border-radius: 50%;
 }
 
 .dark-mode .buttons button {
