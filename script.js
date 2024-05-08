@@ -110,6 +110,7 @@ function clearDisplay() {
   operator = "";
   previousOperand = "";
   currentOperand = "";
+  decimalButton.disabled = false;
 }
 
 document.addEventListener("keydown", (e) => {
