@@ -92,11 +92,12 @@ equalButton.addEventListener("click", (e) => {
 
 decimalButton.addEventListener("click", (e) => {
   if (!currentOperand.includes(".")) {
-    currentOperand += number;
-    e.target.blur();
+    currentOperand += ".";
+    currentOperandText.textContent = currentOperand;
   } else {
     decimalButton.disabled = true;
   }
+  e.target.blur();
 });
 
 clearButton.addEventListener("click", (e) => {
@@ -132,6 +133,13 @@ document.addEventListener("keydown", (e) => {
     }
   } else if (e.key === "Delete") {
     clearDisplay();
+  } else if (e.key === ".") {
+    if (!currentOperand.includes(".")) {
+      currentOperand += ".";
+      currentOperandText.textContent = currentOperand;
+    } else {
+      decimalButton.disabled = true;
+    }
   }
 });
 
